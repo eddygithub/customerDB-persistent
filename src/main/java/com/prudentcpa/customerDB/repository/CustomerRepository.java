@@ -1,5 +1,7 @@
 package com.prudentcpa.customerDB.repository;
 
+import java.util.List;
+
 import org.springframework.data.gemfire.repository.GemfireRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,5 +19,10 @@ import com.prudent.domain.Customer;
 @Repository
 public interface CustomerRepository extends GemfireRepository<Customer, Long> {
 
-	Customer findByCustomerID(String customerid);
+	Customer findByCustomerID(String customerID);
+	
+	@Override
+	public List<Customer> findAll();
+	
+	public List<Customer> findCustomersByUserID(Long userID);
 }

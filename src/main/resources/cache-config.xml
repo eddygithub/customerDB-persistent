@@ -11,7 +11,9 @@
 	
 	<beans>
 		<gfe:partitioned-region id="Customer" />
+		<gfe:partitioned-region id="User"/>
 	</beans>
+	
 	<beans>
 		<util:properties id="cache-properties">
 			<prop key="log-level">warning</prop>
